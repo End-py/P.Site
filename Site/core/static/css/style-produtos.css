@@ -1,0 +1,67 @@
+
+/*-----------------*/
+
+.container {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 6%;
+    margin-top: 25px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    margin-bottom: 10%;
+}
+
+.box-1 {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11), 0 2px 2px rgba(0, 0, 0, 0.11),0 4px 4px rgba(0, 0, 0, 0.11), 0 8px 8px rgba(0, 0, 0, 0.11),0 16px 16px rgba(0, 0, 0, 0.11), 0 32px 32px rgba(0, 0, 0, 0.11);
+    border-radius: 25px;
+    width: 250px;
+    height: 350px;
+    background: #ffff;
+    padding:15px 15px;
+}
+
+.box-1:hover {
+    box-shadow: rgba(0, 0, 0, 0.53) 0px 0px 4px 3px inset, 0 1px 1px rgba(0, 0, 0, 0.11), 0 2px 2px rgba(0, 0, 0, 0.11),0 4px 4px rgba(0, 0, 0, 0.11), 0 8px 8px rgba(0, 0, 0, 0.11),0 16px 16px rgba(0, 0, 0, 0.11), 0 32px 32px rgba(0, 0, 0, 0.11);
+}
+
+/*-----------------*/
+
+
+
+/*-----------------*/
+
+.pimg {
+    width: 224px;
+    height: 224px;
+    margin-top: 20px;
+    margin-left: -2px;
+}
+
+.produto {
+    text-decoration: none;
+    color: black;
+    margin: 1%;
+    font-size: 18px;
+}
+
+.produto:hover {
+    color: black;
+}
+
+.produto:focus{
+    box-shadow: #5865f2 0px 0px 0px 4px, #5764f1 0px 0px 0px 4px inset;
+    border-radius: 25px;
+}
+
+.title {
+    margin-top: 5px;
+    list-style: none;
+}
+
+.info li {
+    margin-top: 10%;
+    list-style: none;
+}
+
+/*-----------------*/

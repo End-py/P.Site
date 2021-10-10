@@ -1,0 +1,73 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{% static 'css/style-contato.css' %}">
+    <link rel="stylesheet" href="{% static 'css/fundo.css' %}">
+    <link rel="stylesheet" href="{% static 'css/button.css' %}">
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+
+    <link rel="shortcut icon" href="{% static 'images/favicon-contato.svg' %}" type="image/x-icon">
+
+    <title>Contato</title>
+
+</head>
+<body>
+
+<nav>
+    <a class="logo">Projeto SENAI</a>
+
+    <ul class="left">
+        <li><a href="http://localhost:8000/home" class="button001" >Home</a></li>
+        <li><a href="http://localhost:8000/produtos" class="button001" >Produtos</a></li>
+        <li><a href="http://localhost:8000/contato" class="button001" >Contato</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+    <div class="box-1">
+
+    <h1>Envie seu Feedback</h1>
+
+    <form>
+
+<div class="meu_form">
+        <input type="text" id="nomeid" placeholder="Nome: Gabriel Araujo" name="nome" required="required"/>
+</div>
+
+<div class="meu_form">
+        <input type="tel" id="foneid" placeholder="Telefone Ex: (xx)xx-xx-xx-xx" name="fone" />
+</div>
+
+<div class="meu_form">
+        <input type="email" id="emailid" placeholder="Email: fulano@mail.com" name="email" required="required"/>
+</div>
+
+    <textarea placeholder="Deixe sua opnião"></textarea>
+    <input type="submit" class="button002" onclick="Enviar();" value="Enviar" />
+
+    </form>
+</div>
+
+<div class="box-2">
+
+    <h2>Entre em contato</h2>
+
+        <ul class="contatos">
+            <li><a href="#" class="button003"><img src="{% static 'images/ico-discord.svg' %}" alt="">Discord</a></li>
+            <li><a href="#" class="button003"><img src="{% static 'images/ico-twitter.svg' %}" alt="">Twitter</a></li>
+            <li><a href="#" class="button003"><img src="{% static 'images/ico-facebook.svg' %}" alt="">Facebook</a></li>
+            <li><a href="#" class="button003"><img src="{% static 'images/ico-gmail.svg' %}" alt="">Gmail</a></li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>

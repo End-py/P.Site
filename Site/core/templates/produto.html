@@ -1,0 +1,99 @@
+{% load static %} {% load cloudinary %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{% static 'css/fundo.css' %}">
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+    <link rel="stylesheet" href="{% static 'css/button.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style-produto.css' %}">
+
+    <link rel="shortcut icon" href="{% static 'images/favicon-produtos.svg' %}" type="image/x-icon">
+
+    <title>Produto</title>
+
+</head>
+<body>
+
+
+
+<nav>
+    <a class="logo">Projeto SENAI</a>
+        <ul class="left">
+            <li><a href="http://localhost:8000/home" class="button001" >Home</a></li>
+            <li><a href="http://localhost:8000/produtos" class="button001" >Produtos</a></li>
+            <li><a href="http://localhost:8000/contato" class="button001" >Contato</a></li>
+    </ul>
+</nav>
+
+
+
+<div class="container-nav">
+    <nav class="nav-produto">
+        <ul>
+            <li><a href="http://localhost:8000/produtos" class="button004">Back</a></li>
+            <li><a href="#" class="button004">Ofertas</a></li>
+            <li><a href="#" class="button004">Lançamentos</a></li>
+            <li><a href="#" class="button004">Mais Vendidos</a></li>
+        </ul>
+    </nav>
+</div>
+
+
+
+<div class="container">
+
+<div class="box-1">
+
+    <h1>{{produto.nome}}</h1>
+
+<div class="pimg-container">
+    {% if produto.image %}
+
+    <img class="pimg-1" src="{{produto.image_1.url}}" alt="">
+    <img class="pimg-2" src="{{produto.image_2.url}}" alt="">
+    <img class="pimg-3" src="{{produto.image_3.url}}" alt="">
+    <img class="pimg-4" src="{{produto.image_4.url}}" alt="">
+    
+    {% else %}
+    
+    <img class="pimg-1" src="{% static 'images/defalt-p.jpg' %}" alt="">
+    <img class="pimg-2" src="{% static 'images/defalt-p.jpg' %}" alt="">
+    <img class="pimg-3" src="{% static 'images/defalt-p.jpg' %}" alt="">
+    <img class="pimg-4" src="{% static 'images/defalt-p.jpg' %}" alt="">
+    
+    {% endif %}
+</div>
+
+    <div class="coment-1">
+        <ul class="description">
+            <li>{{produto.description}}</li>
+        </ul>
+
+    </div>
+</div>
+
+<div class="box-2">
+
+    <h2>Info</h2>
+
+    <div class="coment-2">
+
+        <ul class="info">
+            <li>R$ {{produto.preco}}</li>
+            <li>Estoque: {{produto.estoque}}</li>
+        </ul>
+
+    </div>
+</div>
+
+</div>
+
+
+</body>
+</html>

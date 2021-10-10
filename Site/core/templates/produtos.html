@@ -1,0 +1,84 @@
+{% load static %} {% load cloudinary %}
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{% static 'css/style-produtos.css' %}">
+    <link rel="stylesheet" href="{% static 'css/fundo.css' %}">
+    <link rel="stylesheet" href="{% static 'css/button.css' %}">
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+
+    <link rel="shortcut icon" href="{% static 'images/favicon-produtos.svg' %}" type="image/x-icon">
+
+    <title>Produtos</title>
+
+</head>
+<body>
+
+
+
+<nav>
+    <a class="logo">Projeto SENAI</a>
+        <ul class="left">
+            <li><a href="http://localhost:8000/home" class="button001" >Home</a></li>
+            <li><a href="http://localhost:8000/produtos" class="button001" >Produtos</a></li>
+            <li><a href="http://localhost:8000/contato" class="button001" >Contato</a></li>
+    </ul>
+</nav>
+
+
+
+<div class="container-nav">
+    <nav class="nav-produto">
+        <ul>
+            <li><a href="#" class="button004">Ofertas</a></li>
+            <li><a href="#" class="button004">Lançamentos</a></li>
+            <li><a href="#" class="button004">Mais Vendidos</a></li>
+        </ul>
+    </nav>
+</div>
+
+
+<div class="container">
+
+{% for p in produto %}
+
+<a href="/produto/{{p.id}}" class="produto">
+    <div class="box-1">
+
+<div >
+    <ul class="title">
+        <li>{{p.nome}}</li>
+    </ul>
+
+{% if p.image %}
+
+<img class="pimg" src="{{p.image.url}}" alt="">
+
+{% else %}
+
+<img class="pimg" src="{% static 'images/defalt-p.jpg' %}" alt="">
+
+{% endif %}
+
+    <ul class="info">
+        <li>R$ {{p.preco}}</li>
+    </ul>
+</div>
+
+    </div>
+</a>
+
+{% endfor %}
+
+</div>
+
+
+</body>
+</html>
